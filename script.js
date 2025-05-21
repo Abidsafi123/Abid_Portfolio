@@ -1,6 +1,6 @@
 // Typing effect for hero section
 const typedText = document.getElementById("typed-text");
-const text = "Full Stack (MERN) Developer";
+const text = "    I am Abid Safi ,Full Stack (MERN) Developer";
 let index = 0;
 
 function typeEffect() {
