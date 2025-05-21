@@ -1,0 +1,152 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abid Khan | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="text-gray-900">
+  <!-- Header -->
+  <header class="bg-white bg-opacity-90 shadow-md p-4 fixed w-full top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-400">Abid Khan</h1>
+      <nav class="hidden md:flex space-x-4">
+        <a href="#home" class="text-blue-500 hover:underline">Home</a>
+        <a href="#about" class="text-blue-500 hover:underline">About</a>
+        <a href="#projects" class="text-blue-500 hover:underline">Projects</a>
+        <a href="#resume" class="text-blue-500 hover:underline cursor-pointer">Resume</a>
+        <a href="#contact" class="text-blue-500 hover:underline">Contact</a>
+      </nav>
+      <button id="menu-toggle" class="md:hidden text-blue-500 text-2xl">☰</button>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden flex-col bg-white p-4">
+      <a href="#home" class="py-1 text-blue-500 hover:underline">Home</a>
+      <a href="#about" class="py-1 text-blue-500 hover:underline">About</a>
+      <a href="#projects" class="py-1 text-blue-500 hover:underline">Projects</a>
+      <a href="#resume" class="py-1 text-blue-500 hover:underline cursor-pointer">Resume</a>
+      <a href="#contact" class="py-1 text-blue-500 hover:underline">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="text-center py-32 bg-gradient-to-r from-blue-200 to-blue-400 bg-opacity-70">
+    <h2 class="text-4xl font-bold mb-4" id="typed-text"></h2>
+    <p class="max-w-xl mx-auto text-lg">I am a full stack (MERN) developer and also a RESTful API developer.</p>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="py-16 bg-white bg-opacity-90">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center md:items-start gap-10">
+      <div class="md:w-1/2 w-full">
+        <img src="abid2.jpg" alt="Abid Khan" class="rounded-lg shadow-lg w-full object-cover h-100 md:h-96">
+      </div>
+      <div class="md:w-1/2 w-full">
+        <h3 class="text-3xl font-bold mb-4">About Me</h3>
+        <p class="text-lg leading-relaxed">
+          Hello! I'm <strong>Abid Khan</strong>, a passionate and detail-oriented Full Stack (MERN) Developer and RESTful API specialist.
+          I love building efficient, scalable, and elegant web solutions that solve real-world problems.
+          With hands-on experience in creating both frontend and backend applications, I enjoy turning ideas into digital products.
+          I’m always learning and exploring new technologies to improve my craft.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-16 container mx-auto px-4">
+    <h3 class="text-3xl font-bold text-center mb-10">Projects</h3>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white bg-opacity-90 p-6 rounded-lg shadow-md">
+        <h4 class="text-xl font-semibold mb-2">Weather App</h4>
+        <p>A real-time weather forecast app using external APIs to display weather conditions by city.</p>
+      </div>
+      <div class="bg-white bg-opacity-90 p-6 rounded-lg shadow-md">
+        <h4 class="text-xl font-semibold mb-2">Currency Converter</h4>
+        <p>A simple and intuitive tool to convert between currencies using live exchange rates.</p>
+      </div>
+      <div class="bg-white bg-opacity-90 p-6 rounded-lg shadow-md">
+        <h4 class="text-xl font-semibold mb-2">Airline Management System</h4>
+        <p>A full-featured airline booking and management platform with admin and user panels.</p>
+      </div>
+      <div class="bg-white bg-opacity-90 p-6 rounded-lg shadow-md">
+        <h4 class="text-xl font-semibold mb-2">RESTful API</h4>
+        <p>RESTful API For cricket Player and Students Records.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume" class="py-16 text-center bg-white bg-opacity-90">
+    <a href="Abid_Khan_Resume.docx" id="download-resume" download>
+      <button class="bg-blue-600 w-[140px] p-2 rounded-lg text-white font-bold hover:bg-blue-500 transition duration-1000 focus:ring-2 focus:ring-pink-700">
+        Download Resume
+      </button>
+    </a>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact" class="py-16 bg-white bg-opacity-90">
+    <div class="container mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-10">Contact Me</h3>
+      <form id="contactForm" class="max-w-xl mx-auto bg-gray-50 p-6 rounded-lg shadow-md">
+        <div class="mb-4">
+          <label class="block mb-2 font-semibold">Full Name</label>
+          <input type="text" id="name" class="w-full p-2 border border-gray-300 rounded" required>
+        </div>
+        <div class="mb-4">
+          <label class="block mb-2 font-semibold">Email</label>
+          <input type="email" id="email" class="w-full p-2 border border-gray-300 rounded" required>
+        </div>
+        <div class="mb-4">
+          <label class="block mb-2 font-semibold">Phone Number</label>
+          <input type="tel" id="phone" class="w-full p-2 border border-gray-300 rounded">
+        </div>
+        <div class="mb-4">
+          <label class="block mb-2 font-semibold">Subject</label>
+          <input type="text" id="subject" class="w-full p-2 border border-gray-300 rounded">
+        </div>
+        <div class="mb-4">
+          <label class="block mb-2 font-semibold">Message</label>
+          <textarea id="message" class="w-full p-2 border border-gray-300 rounded" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-200 text-center p-6">
+    <div class="flex justify-center space-x-6 mb-4">
+      <a href="https://facebook.com/abidsafi" target="_blank" class="text-blue-600 text-2xl hover:text-blue-800">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://wa.me/923139594547" target="_blank" class="text-green-500 text-2xl hover:text-green-700">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/abid-khan-3836aa308" target="_blank" class="text-blue-700 text-2xl hover:text-blue-900">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="mailto:abidsafi925@gmail.com" class="text-red-500 text-2xl hover:text-red-700">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+    <p>&copy; 2025 Abid Khan. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
