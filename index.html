@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,6 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  
   <style>
     body {
       background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
@@ -18,6 +19,11 @@
 
     html {
       scroll-behavior: smooth;
+    }
+
+    /* Transition class for sidebar menu */
+    #mobile-menu {
+      transition: transform 0.3s ease-in-out;
     }
   </style>
 </head>
@@ -36,12 +42,14 @@
       </nav>
       <button id="menu-toggle" class="md:hidden text-blue-500 text-2xl">☰</button>
     </div>
-    <div id="mobile-menu" class="md:hidden hidden flex-col bg-white p-4">
-      <a href="#home" class="py-1 text-blue-500 hover:underline">Home</a>
-      <a href="#about" class="py-1 text-blue-500 hover:underline">About</a>
-      <a href="#projects" class="py-1 text-blue-500 hover:underline">Projects</a>
-      <a href="#resume" class="py-1 text-blue-500 hover:underline cursor-pointer">Resume</a>
-      <a href="#contact" class="py-1 text-blue-500 hover:underline">Contact</a>
+    <!-- Updated mobile menu -->
+    <div id="mobile-menu"
+      class="md:hidden fixed top-16 left-0 w-64 h-full transform -translate-x-full bg-white p-6 shadow-lg z-40 flex-col hidden">
+      <a href="#home" class="py-2 block text-blue-500 hover:underline">Home</a>
+      <a href="#about" class="py-2 block text-blue-500 hover:underline">About</a>
+      <a href="#projects" class="py-2 block text-blue-500 hover:underline">Projects</a>
+      <a href="#resume" class="py-2 block text-blue-500 hover:underline cursor-pointer">Resume</a>
+      <a href="#contact" class="py-2 block text-blue-500 hover:underline">Contact</a>
     </div>
   </header>
 
@@ -49,14 +57,18 @@
   <section id="home" class="text-center py-32 bg-gradient-to-r from-blue-200 to-blue-400 bg-opacity-70">
     <h2 class="text-4xl font-bold mb-4" id="typed-text"></h2>
     <p class="max-w-xl mx-auto text-lg">I am a full stack (MERN) developer and also a RESTful API developer.</p>
+    <!-- Rounded image -->
+    <img src="new.jpg" alt="MyImage"
+      class="w-40 h-40 mx-auto mt-6 object-cover rounded-full border-4 border-white shadow-md">
   </section>
 
   <!-- About Me Section -->
   <section id="about" class="py-16 bg-white bg-opacity-90">
     <div class="container mx-auto px-4 flex flex-col md:flex-row items-center md:items-start gap-10">
-      <div class="md:w-1/2 w-full">
-        <img src="abid2.jpg" alt="Abid Khan" class="rounded-lg shadow-lg w-full object-cover h-100 md:h-96">
-      </div>
+      <div class="md:w-1/2 w-full lg:h-100">
+        <img src="abid2.jpg" alt="Abid Khan" class="rounded-md shadow-lg w-full object-cover h-100 md:h-96 ">
+
+       </div>
       <div class="md:w-1/2 w-full">
         <h3 class="text-3xl font-bold mb-4">About Me</h3>
         <p class="text-lg leading-relaxed">
@@ -78,6 +90,8 @@
       <div class="bg-white bg-opacity-90 p-6 rounded-lg shadow-md">
         <h4 class="text-xl font-semibold mb-2">Weather App</h4>
         <p>A real-time weather forecast app using external APIs to display weather conditions by city.</p>
+        <a href=""><button class="bg-blue-600 p-2 rounded-lg text-white font-bold">Get Code.</button>
+</a>
       </div>
       <div class="bg-white bg-opacity-90 p-6 rounded-lg shadow-md">
         <h4 class="text-xl font-semibold mb-2">Currency Converter</h4>
@@ -86,10 +100,14 @@
       <div class="bg-white bg-opacity-90 p-6 rounded-lg shadow-md">
         <h4 class="text-xl font-semibold mb-2">Airline Management System</h4>
         <p>A full-featured airline booking and management platform with admin and user panels.</p>
+                <a href="https://github.com/Abidsafi123/Airline_Mgt_System"><button class="bg-blue-600 p-2 rounded-lg text-white font-bold">Get Code.</button>
+</a>
       </div>
       <div class="bg-white bg-opacity-90 p-6 rounded-lg shadow-md">
         <h4 class="text-xl font-semibold mb-2">RESTful API</h4>
         <p>RESTful API For cricket Player and Students Records.</p>
+                <a href="https://github.com/Abidsafi123/CricketPlayer_API"><button class="bg-blue-600 p-2 rounded-lg text-white font-bold">Get Code.</button>
+</a>
       </div>
     </div>
   </section>
@@ -136,28 +154,34 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-200 text-center p-6">
-    <div class="flex justify-center space-x-6 mb-4">
-      <a href="https://www.facebook.com/abid.safi.98284" target="_blank"
-        class="text-blue-600 text-2xl hover:text-blue-800">
-        <i class="fab fa-facebook"></i>
-      </a>
-      <a href="https://wa.me/923139594547" target="_blank" class="text-green-500 text-2xl hover:text-green-700">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/abid-khan-3836aa308" target="_blank"
-        class="text-blue-700 text-2xl hover:text-blue-900">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="mailto:abidsafi925@gmail.com" class="text-red-500 text-2xl hover:text-red-700">
-        <i class="fas fa-envelope"></i>
-      </a>
-    </div>
-    <p>&copy; 2025 Abid Khan. All rights reserved.</p>
-  </footer>
+  <!-- Footer --> <!-- Footer -->
+<footer class="bg-gray-200 text-center p-6">
+  <div class="flex justify-center space-x-6 mb-4">
+    <a href="https://www.facebook.com/abid.safi.98284" target="_blank"
+      class="text-blue-600 text-2xl hover:text-blue-800">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a href="https://wa.me/923139594547" target="_blank" class="text-green-500 text-2xl hover:text-green-700">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/abid-khan-3836aa308" target="_blank"
+      class="text-blue-700 text-2xl hover:text-blue-900">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="mailto:abidsafi925@gmail.com" class="text-red-500 text-2xl hover:text-red-700">
+      <i class="fas fa-envelope"></i>
+    </a>
+     <a href="https://github.com/Abidsafi123" target="_blank" class="text-gray-800 text-2xl hover:text-black">
+  <i class="fab fa-github"></i>
+</a>
 
-  <script src="script.js"></script>
+  </div>
+  <p>&copy; 2025 Abid Khan. All rights reserved.</p>
+</footer>
+<script src="script.js"></script>
+
+
+  
 </body>
 
 </html>
